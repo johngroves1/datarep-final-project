@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.background{
+  background-image : url("./images/texture.jpg");
+}
+
+.addAlbum{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10%;
+  color: rgb(233, 195, 25);
+}
+
+.background2{
+  background-image : url("./images/dark.jpg");
+  height: 100vh;
+  background-position: center;
+  
+}
+
+.btn1{
+display:inline-block;
+align-items: left;
+width:100%;
+}
+
+.btn-primary{
+  width: 50%;
+  color: rgb(233, 195, 25);
+}
+
+.btn2{
+  width: 50%;
+  color: rgb(233, 195, 25);
+}
+
+.background3{
+  background-image : url("./images/music.jpeg");
+  height: 100vh;
+  background-position: center;
+  text-shadow:3px 3px black ;
+  color: rgb(233, 195, 25);;
+}
