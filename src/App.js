@@ -1,9 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import { Header } from './components/header';
-import { Footer } from './components/footer';
-import { Content } from './components/content';
+import { Homepage } from './components/homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
@@ -19,8 +16,8 @@ class App extends Component {
         <div className="App">
 
           <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">      
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/LP_Vinyl_Symbol_Icon.png" width="30" height="30"></img>
+            <Navbar.Brand>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/LP_Vinyl_Symbol_Icon.png" width="30" height="30"></img>
             </Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
@@ -28,13 +25,13 @@ class App extends Component {
               <Nav.Link href="/addAlbum">Add Albums</Nav.Link>
             </Nav>
           </Navbar>
-         
+
 
           <Switch>
-            <Route path='/' component={Content} exact />
+            <Route path='/' component={Homepage} exact />
             <Route path='/displayAlbum' component={DisplayAlbum} exact />
             <Route path='/addAlbum' component={AddAlbum} exact />
-            <Route path='/updateAlbum/:id' component={UpdateAlbum}/>
+            <Route path='/updateAlbum/:id' component={UpdateAlbum} />
           </Switch>
 
         </div>

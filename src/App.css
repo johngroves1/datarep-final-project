@@ -37,18 +37,18 @@
   }
 }
 
-.background{
+.displayStyle{
   background-image : url("./images/texture.jpg");
 }
 
 .addAlbum{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding-top: 10%;
   color: rgb(233, 195, 25);
 }
 
-.background2{
+.addStyle{
   background-image : url("./images/dark.jpg");
   height: 100vh;
   background-position: center;
@@ -71,7 +71,7 @@ width:100%;
   color: rgb(233, 195, 25);
 }
 
-.background3{
+.backgroundhome{
   background-image : url("./images/music.jpeg");
   height: 100vh;
   background-position: center;

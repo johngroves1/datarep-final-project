@@ -1,27 +1,27 @@
 import { Component } from "react";
 import Card from 'react-bootstrap/Card';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import '../App.css';
 
 export class AlbumItem extends Component {
 
-    constructor(){
+    constructor() {
         super();
 
         this.DeleteAlbum = this.DeleteAlbum.bind(this);
     }
 
-    DeleteAlbum(e){
+    DeleteAlbum(e) {
         e.preventDefault();
-        console.log("Delete: "+ this.props.album._id);
+        console.log("Delete: " + this.props.album._id);
 
-        axios.delete("http://localhost:4000/api/albums/"+this.props.album._id)
-        .then(()=>{
-            this.props.ReloadData();
-        })
-        .catch();
+        axios.delete("http://localhost:4000/api/albums/" + this.props.album._id)
+            .then(() => {
+                this.props.ReloadData();
+            })
+            .catch();
     }
 
     render() {
@@ -37,11 +37,11 @@ export class AlbumItem extends Component {
                         </Card.Text>
                     </Card.Body>
                     <div className="btn1">
-                    <Link to={"/updateAlbum/"+ this.props.album._id} className="btn btn-primary" >Edit</Link>
-                    <Button variant="danger" className="btn2" onClick={this.DeleteAlbum}>Delete</Button>
+                        <Link to={"/updateAlbum/" + this.props.album._id} className="btn btn-primary" >Edit</Link>
+                        <Button variant="danger" className="btn2" onClick={this.DeleteAlbum}>Delete</Button>
                     </div>
                 </Card>
-                
+
 
 
             </div>

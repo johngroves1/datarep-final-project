@@ -11,7 +11,6 @@ export class AddAlbum extends Component {
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeArtist = this.onChangeArtist.bind(this);
 
-
         this.state = {
             cover: '',
             title: '',
@@ -57,42 +56,40 @@ export class AddAlbum extends Component {
             })
     }
 
-    //axios post request for server!
-
     render() {
         return (
-            <div className="background2">
-            <div className="addAlbum">
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Add Album Cover: </label>
-                        <input type='text'
-                            className='form-control'
-                            value={this.state.cover}
-                            onChange={this.onChangeCover}></input>
-                    </div>
-                    <div className="form-group">
-                        <label>Add Title: </label>
-                        <input type='text'
-                            className='form-control'
-                            value={this.state.title}
-                            onChange={this.onChangeTitle}></input>
-                    </div>
-                    <div className='form-group'>
-                        <label>Add Artist: </label>
-                        <textarea type='text'
-                            className='form-control'
-                            value={this.state.artist}
-                            onChange={this.onChangeArtist}>
-                        </textarea>
-                    </div>
-                    <div className="form-group">
-                        <input type='submit'
-                            value='Add Album'
-                            className='btn btn-primary'></input>
-                    </div>
-                </form>
-            </div>
+            <div className="addStyle">
+                <div className="addAlbum">
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                            <label>Add Album Cover: </label>
+                            <textarea type='text'
+                                className='form-control'
+                                value={this.state.cover}
+                                onChange={this.onChangeCover}></textarea>
+                        </div>
+                        <div className="form-group">
+                            <label>Add Title: </label>
+                            <input type='text'
+                                className='form-control'
+                                value={this.state.title}
+                                onChange={this.onChangeTitle}></input>
+                        </div>
+                        <div className='form-group'>
+                            <label>Add Artist: </label>
+                            <input type='text'
+                                className='form-control'
+                                value={this.state.artist}
+                                onChange={this.onChangeArtist}>
+                            </input>
+                        </div>
+                        <div className="form-group">
+                            <input type='submit'
+                                value='Add Album'
+                                className='btn btn-primary'></input>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }

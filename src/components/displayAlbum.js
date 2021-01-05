@@ -3,9 +3,9 @@ import { Albums } from "./albums";
 import axios from 'axios';
 import '../App.css';
 
-export class DisplayAlbum extends Component{
+export class DisplayAlbum extends Component {
 
-    constructor(){
+    constructor() {
         super();
 
         this.ReloadData = this.ReloadData.bind(this);
@@ -15,34 +15,34 @@ export class DisplayAlbum extends Component{
         albums: []
     };
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get('http://localhost:4000/api/albums')
-        .then(
-        (response)=>{
-            console.log(response.data)
-            this.setState({albums: response.data})
-        })
-        .catch((error) =>{
-            console.log(error)
-        });
+            .then(
+                (response) => {
+                    console.log(response.data)
+                    this.setState({ albums: response.data })
+                })
+            .catch((error) => {
+                console.log(error)
+            });
     }
 
-    ReloadData(){
+    ReloadData() {
         axios.get('http://localhost:4000/api/albums')
-        .then((response) => {
-            this.setState({ albums: response.data })
-        })
-        .catch((error) => {
-            console.log(error)
-        });
+            .then((response) => {
+                this.setState({ albums: response.data })
+            })
+            .catch((error) => {
+                console.log(error)
+            });
     }
 
-    render(){
-        return(
-            <div className="background">
-            <div style={{display:'inline-block'}}>
-                <Albums music={this.state.albums} ReloadData={this.ReloadData}></Albums>
-            </div>
+    render() {
+        return (
+            <div className="displayStyle">
+                <div style={{ display: 'inline-block' }}>
+                    <Albums music={this.state.albums} ReloadData={this.ReloadData}></Albums>
+                </div>
             </div>
         );
     }
